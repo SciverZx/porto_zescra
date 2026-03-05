@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zescra Hendric — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,600;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Assets/css/main.css">
+    <link rel="shortcut icon" href="Assets/img/zescra-chibby.ico" type="image/x-icon">
+</head>
+
+<body>
+    <canvas id="cursor-stars" style="display:none"></canvas>
+    <div id="cursor-trail-container"></div>
+
+    <svg id="custom-cursor" width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="cursor-glow" x="-60%" y="-60%" width="220%" height="220%">
+                <feGaussianBlur stdDeviation="2.5" result="blur" />
+                <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                </feMerge>
+            </filter>
+        </defs>
+        <g filter="url(#cursor-glow)">
+            <path d="M24 3 L44 44 Q24 36 4 44 Z" fill="white" />
+            <path d="M24 10 L39 41 Q24 34 9 41 Z" fill="#0c0c0e" />
+        </g>
+    </svg>
+
+    <div id="hdg-display">HDG — <span id="hdg">000</span>°</div>
+
+    <nav id="navbar">
+        <a href="#hero" class="nav-logo">Zescra.</a>
+        <ul class="nav-links">
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-left">
+            <div class="label" id="label">Web Programmer · MC Server Developer</div>
+            <h1 class="hero-name">
+                <span class="line">Zescra</span>
+                <span class="line accent-line">Hendric</span>
+            </h1>
+            <p class="hero-desc" id="desc">
+                Web Programmer at <a style="text-decoration:none;" target="_blank"
+                    href="https://www.sevanam-enterprise.com/"><strong style="color:var(--fg)">PT. Sevanam Teknologi
+                        Solusindo</strong></a>, specializing in Microfinance web solutions. Beyond my 9-to-5, I'm a
+                Freelance Minecraft Server Developer, bringing your server concepts to life.
+            </p>
+            <a href="#work" class="hero-cta" id="cta">View My Work →</a>
+        </div>
+        <div class="hero-right">
+            <div class="photo-orbit" id="photo">
+                <div class="photo-frame">
+                    <img src="Assets/img/zescra.png" alt="Zescra Hendric" />
+                </div>
+            </div>
+        </div>
+        <div class="img-text" id="deco"><span>Zescra Portfolio</span></div>
+    </section>
+
+    <section class="skills-section" id="skills">
+        <div class="skills-header">
+            <span class="skills-label">What I Work With</span>
+            <h2 class="skills-title">Skills</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card" data-skill-card>
+                <div class="skill-card-header">
+                    <div class="skill-icon skill-icon--web">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="18" x="3" y="3" rx="2" />
+                            <path d="M3 9h18" />
+                            <path d="M9 21V9" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-card-title">Web Development</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><span class="list-item"></span>PHP — CodeIgniter 4 / Laravel</li>
+                    <li><span class="list-item"></span>JavaScript</li>
+                    <li><span class="list-item"></span>Python</li>
+                    <li><span class="list-item"></span>HTML & CSS</li>
+                    <li><span class="list-item"></span>RESTful API</li>
+                </ul>
+            </div>
+            <div class="skill-card skill-card--featured" data-skill-card>
+                <div class="skill-card-header">
+                    <div class="skill-icon skill-icon--mc">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+                            <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+                            <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-card-title">MC Server Dev</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><span class="list-item"></span>Server Setup & Optimization (dari 0)</li>
+                    <li><span class="list-item"></span>PaperMC / Spigot / BungeeCord</li>
+                    <li><span class="list-item"></span>Plugin Curation & Configuration</li>
+                    <li><span class="list-item"></span>Simple Plugin Dev (Java — Login, dsb)</li>
+                    <li><span class="list-item"></span>Performance Tuning & TPS Management</li>
+                </ul>
+            </div>
+            <div class="skill-card" data-skill-card>
+                <div class="skill-card-header">
+                    <div class="skill-icon skill-icon--db">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+                            <path d="M3 12A9 3 0 0 0 21 12" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-card-title">Database</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><span class="list-item"></span>MySQL</li>
+                    <li><span class="list-item"></span>Database Design & Normalization</li>
+                    <li><span class="list-item"></span>Query Optimization</li>
+                    <li><span class="list-item"></span>Relational Schema Design</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="work-section">
+        <div class="work-header" data-work-header id="work">
+            <span class="work-label">Project Showcase</span>
+            <h2 class="work-title">Work</h2>
+        </div>
+        <div class="work-slider" data-work-slider>
+            <div class="work-image-container" id="workImageContainer"></div>
+            <div class="work-content" id="workContent">
+                <div class="work-corner-deco"></div>
+                <div class="work-nav">
+                    <button class="work-nav-btn" id="workBtnUp" title="Previous">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="18 15 12 9 6 15" />
+                        </svg>
+                    </button>
+                    <button class="work-nav-btn" id="workBtnDown" title="Next">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="work-counter" id="workCounter">
+                    <span class="work-counter-num" id="workCounterNum">01</span>
+                    <span class="work-counter-sep">—</span>
+                    <span class="work-counter-total" id="workCounterTotal">04</span>
+                </div>
+                <div class="work-title-wrap"><span class="work-proj-title" id="workProjTitle"></span></div>
+                <div class="work-subtitle-wrap"><span class="work-proj-subtitle" id="workProjSubtitle"></span></div>
+                <div class="work-line" id="workLine"></div>
+                <div class="work-desc-wrap"><span class="work-proj-desc" id="workProjDesc"></span></div>
+                <div class="work-tags" id="workTags"></div>
+                <a class="work-proj-cta" id="workProjCta" href="#" target="_blank">View Project →</a>
+                <div class="work-progress" id="workProgress"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="journey-section" id="journey">
+
+        <div class="journey-header" data-journey-header>
+            <span class="journey-label">Career & Education</span>
+            <h2 class="journey-title">My Journey</h2>
+        </div>
+
+        <div class="tl-center-wrap" id="tl-center-wrap">
+
+            <div class="tl-center-track">
+                <div class="tl-center-fill" id="tl-center-fill"></div>
+                <div class="tl-center-tip"  id="tl-center-tip"></div>
+            </div>
+
+            <div class="tl-row tl-left" data-tl-item>
+                <div class="tl-card-side">
+                    <div class="tl-card" onmousemove="tlSpot(this,event)">
+                        <span class="tl-badge">Present</span>
+                        <div class="tl-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="2" y="7" width="20" height="14" rx="2" />
+                                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                                <line x1="12" y1="12" x2="12" y2="17" />
+                                <line x1="9" y1="14.5" x2="15" y2="14.5" />
+                            </svg>
+                        </div>
+                        <div class="tl-role">Web Programmer</div>
+                        <div class="tl-org">PT. Sevanam Teknologi Solusindo</div>
+                        <div class="tl-date">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            2025 — Present
+                        </div>
+                        <p class="tl-desc">Developing and maintaining microfinance web solutions. Focusing on scalable back-end architecture with Laravel and clean front-end integration for financial platforms.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">CodeIgniter 3 & 4</span>
+                            <span class="tl-tag">MySQL</span>
+                            <span class="tl-tag">RESTful API</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-node">
+                    <div class="tl-dot-center"></div>
+                    <div class="tl-year-inline">2025 — Present</div>
+                </div>
+                <div class="tl-card-side tl-empty"></div>
+            </div>
+
+            <div class="tl-row tl-right" data-tl-item>
+                <div class="tl-card-side tl-empty"></div>
+                <div class="tl-node">
+                    <div class="tl-dot-center"></div>
+                    <div class="tl-year-inline">2025 — Present</div>
+                </div>
+                <div class="tl-card-side">
+                    <div class="tl-card" onmousemove="tlSpot(this,event)">
+                        <span class="tl-badge">Pursuing</span>
+                        <div class="tl-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 09 3 12 0v-5" />
+                            </svg>
+                        </div>
+                        <div class="tl-role">S1 Teknologi Informasi</div>
+                        <div class="tl-org">ITB STIKOM Bali</div>
+                        <div class="tl-date">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            2025 — Present
+                        </div>
+                        <p class="tl-desc">Currently pursuing a Bachelor's degree in Information Technology. Actively exploring modern technologies including algorithms, data structures, and machine learning.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">Algorithm</span>
+                            <span class="tl-tag">Data Structure</span>
+                            <span class="tl-tag">Machine Learning</span>
+                            <span class="tl-tag">Database</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tl-row tl-left" data-tl-item>
+                <div class="tl-card-side">
+                    <div class="tl-card" onmousemove="tlSpot(this,event)">
+                        <span class="tl-badge tl-badge--done">2021 — Present</span>
+                        <div class="tl-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+                                <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+                                <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+                            </svg>
+                        </div>
+                        <div class="tl-role">MC Server Developer</div>
+                        <div class="tl-org">Freelance</div>
+                        <div class="tl-date">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            2021 — Present
+                        </div>
+                        <p class="tl-desc">Setup dan konfigurasi server Minecraft. Optimasi TPS, simple custom plugin with Java.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">PaperMC</span>
+                            <span class="tl-tag">Java</span>
+                            <span class="tl-tag">BungeeCord</span>
+                            <span class="tl-tag">MySQL</span>
+                            <span class="tl-tag">Skript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-node">
+                    <div class="tl-dot-center"></div>
+                    <div class="tl-year-inline">2021 — Present</div>
+                </div>
+                <div class="tl-card-side tl-empty"></div>
+            </div>
+
+            <div class="tl-row tl-right" data-tl-item>
+                <div class="tl-card-side tl-empty"></div>
+                <div class="tl-node">
+                    <div class="tl-dot-center"></div>
+                    <div class="tl-year-inline">2022 — 2025</div>
+                </div>
+                <div class="tl-card-side">
+                    <div class="tl-card" onmousemove="tlSpot(this,event)">
+                        <span class="tl-badge tl-badge--done">Graduated</span>
+                        <div class="tl-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 09 3 12 0v-5" />
+                            </svg>
+                        </div>
+                        <div class="tl-role">Rekayasa Perangkat Lunak</div>
+                        <div class="tl-org">SMK Pariwisata Triatma Jaya Badung</div>
+                        <div class="tl-date">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            2022 — 2025
+                        </div>
+                        <p class="tl-desc">Graduated from Software Engineering track. Built foundational skills in programming, web development, and database management. Led school's coding community.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">HTML/CSS/JS</span>
+                            <span class="tl-tag">Database</span>
+                            <span class="tl-tag">PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tl-row tl-left" data-tl-item>
+                <div class="tl-card-side">
+                    <div class="tl-card" onmousemove="tlSpot(this,event)">
+                        <span class="tl-badge tl-badge--done">Graduated</span>
+                        <div class="tl-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 09 3 12 0v-5" />
+                            </svg>
+                        </div>
+                        <div class="tl-role">SMP</div>
+                        <div class="tl-org">SMP PGRI 3 Denpasar</div>
+                        <div class="tl-date">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            2019 — 2022
+                        </div>
+                        <p class="tl-desc">Completed junior high school with strong academic record. Developed early interest in computers and technology during this period.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">Mathematics</span>
+                            <span class="tl-tag">Language</span>
+                            <span class="tl-tag">Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-node">
+                    <div class="tl-dot-center"></div>
+                    <div class="tl-year-inline">2019 — 2022</div>
+                </div>
+                <div class="tl-card-side tl-empty"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-bg-orb"></div>
+
+        <div class="contact-header" data-contact-header>
+            <span class="contact-label">Get In Touch</span>
+            <h2 class="contact-title">Let's Talk</h2>
+        </div>
+
+        <div class="contact-wrap">
+            <div class="contact-info" data-contact-info>
+                <p class="contact-intro">
+                    Have a cool project or need a Minecraft server pro? Hit me up! I'm not online 24/7 (a human's gotta sleep!), but I usually reply within a day.
+                </p>
+
+                <div class="contact-availability">
+                    <span class="availability-dot"></span>
+                    <span>Available for freelance & collaboration</span>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm" data-contact-form novalidate>
+                <div class="cf-row cf-row--half">
+                    <div class="cf-field">
+                        <label class="cf-label" for="cf-name">Name</label>
+                        <input class="cf-input" id="cf-name" name="from_name" type="text" placeholder="Your name" autocomplete="off" required />
+                        <span class="cf-err" id="err-name"></span>
+                    </div>
+                    <div class="cf-field">
+                        <label class="cf-label" for="cf-email">Email</label>
+                        <input class="cf-input" id="cf-email" name="from_email" type="email" placeholder="you@example.com" autocomplete="off" required />
+                        <span class="cf-err" id="err-email"></span>
+                    </div>
+                </div>
+
+                <div class="cf-field">
+                    <label class="cf-label" for="cf-subject">Subject</label>
+                    <input class="cf-input" id="cf-subject" name="subject" type="text" placeholder="What's this about?" autocomplete="off" required />
+                    <span class="cf-err" id="err-subject"></span>
+                </div>
+
+                <div class="cf-field">
+                    <label class="cf-label" for="cf-message">Message</label>
+                    <textarea class="cf-input cf-textarea" id="cf-message" name="message" placeholder="Tell me about your project, ideas, or anything..." required></textarea>
+                    <span class="cf-err" id="err-message"></span>
+                </div>
+
+                <div class="cf-footer">
+                    <span class="cf-note">Powered by EmailJS · No data stored</span>
+                    <button class="cf-submit" id="cfSubmit" type="submit">
+                        <span class="cf-submit-text">Send Message →</span>
+                        <span class="cf-submit-loader" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="cf-toast" id="cfToast" aria-live="polite"></div>
+            </form>
+        </div>
+        <div class="contact-divider"></div>
+    </section>
+
+    <footer class="footer-section" id="contact">
+        <div class="gooey-animations" id="particle-container"></div>
+        <div class="footer-content">
+            <div class="column">
+                <h4>Zescra Hendric</h4>
+                <a href="#">PUTU ANANDA HARY SAPUTRA</a>
+                <a href="#">18 Years Old</a>
+                <a href="#">A Student ITB STIKOM BALI</a>
+                <a href="#">&copy; Copyright Zescra 2026</a>
+            </div>
+            <div class="column">
+                <h4>Social</h4>
+                <a href="https://www.instagram.com/anandaharys/" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@zescrax" target="_blank">TikTok</a>
+                <a href="https://github.com/SciverZx" target="_blank">GitHub</a>
+                <a href="https://discord.gg/3MpfFx33Ue" target="_blank">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <svg style="position:absolute;width:0;height:0;overflow:hidden;" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="liquid-effect">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                    result="liquid" />
+            </filter>
+        </defs>
+    </svg>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+        const isMobile = window.innerWidth < 768;
+
+        ScrollTrigger.config({
+            ignoreMobileResize: true,
+            autoRefreshEvents: 'visibilitychange,DOMContentLoaded,load,resize'
+        });
+
+        (function initCursor() {
+            const cursorEl = document.getElementById('custom-cursor');
+            const hdgEl = document.getElementById('hdg');
+
+            let cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+            let tx = cx, ty = cy;
+            let vx = 0, vy = 0;
+            let currentAngle = 0, lastX = cx, lastY = cy;
+
+            const MAX_TRAIL = 18;
+            const trailContainer = document.getElementById('cursor-trail-container');
+            const trails = [];
+
+            for (let i = 0; i < MAX_TRAIL; i++) {
+                const d = document.createElement('div');
+                d.className = 'cursor-trail';
+                const size = Math.max(2, 7 - i * 0.35);
+                d.style.width = size + 'px';
+                d.style.height = size + 'px';
+                d.style.opacity = ((MAX_TRAIL - i) / MAX_TRAIL * 0.45).toFixed(2);
+                trailContainer.appendChild(d);
+                trails.push({ el: d, x: cx, y: cy });
+            }
+
+            document.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; });
+
+            function lerp(a, b, t) { return a + (b - a) * t; }
+
+            function lerpAngle(a, b, t) {
+                let diff = b - a;
+                while (diff > Math.PI) diff -= Math.PI * 2;
+                while (diff < -Math.PI) diff += Math.PI * 2;
+                return a + diff * t;
+            }
+
+            function animateCursor() {
+                cx = lerp(cx, tx, 0.1);
+                cy = lerp(cy, ty, 0.1);
+                vx = cx - lastX; vy = cy - lastY;
+                lastX = cx; lastY = cy;
+
+                const speed = Math.sqrt(vx * vx + vy * vy);
+                if (speed > 0.15) currentAngle = lerpAngle(currentAngle, Math.atan2(vx, -vy), Math.min(0.15 + speed * 0.04, 0.25));
+
+                cursorEl.style.left = (cx - 20) + 'px';
+                cursorEl.style.top = (cy - 20) + 'px';
+                cursorEl.style.transform = `rotate(${currentAngle}rad)`;
+
+                let deg = Math.round(currentAngle * 180 / Math.PI) % 360;
+                if (deg < 0) deg += 360;
+                hdgEl.textContent = String(deg).padStart(3, '0');
+
+                for (let i = trails.length - 1; i > 0; i--) {
+                    trails[i].x = lerp(trails[i].x, trails[i - 1].x, 0.4);
+                    trails[i].y = lerp(trails[i].y, trails[i - 1].y, 0.4);
+                }
+                trails[0].x = cx; trails[0].y = cy;
+
+                trails.forEach((t, i) => {
+                    const offset = (i + 1) * 2.5;
+                    t.el.style.left = (t.x + Math.sin(currentAngle) * -offset * 0.3) + 'px';
+                    t.el.style.top = (t.y + Math.cos(currentAngle) * offset * 0.3) + 'px';
+                    t.el.style.opacity = ((MAX_TRAIL - i) / MAX_TRAIL * 0.45 * Math.min(speed / 3, 1)).toFixed(2);
+                });
+
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+        })();
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const id = this.getAttribute('href');
+                if (id === '#' || id === '') return;
+                const target = document.querySelector(id);
+                if (target) {
+                    e.preventDefault();
+                    gsap.to([document.documentElement, document.body], {
+                        duration: 1.5,
+                        scrollTo: { y: target, offsetY: 70, autoKill: false },
+                        ease: 'power4.inOut'
+                    });
+                }
+            });
+        });
+
+        gsap.set('#navbar', { opacity: 0, y: -20 });
+        gsap.set('#label', { opacity: 0, y: 15 });
+        gsap.set('#desc', { opacity: 0, y: 20 });
+        gsap.set('#cta', { opacity: 0 });
+        gsap.set('#deco', { opacity: 0 });
+        gsap.set('#photo', { opacity: 0, scale: 0.97, y: 20 });
+        gsap.set('.hero-name .line', { yPercent: 110 });
+
+        const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+        heroTl
+            .to('#navbar', { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, 0.3)
+            .to('#label', { opacity: 1, y: 0, duration: 0.6 }, 0.9)
+            .to('.hero-name .line', { yPercent: 0, duration: 0.9, stagger: 0.15, ease: 'power4.out' }, 1.1)
+            .to('#desc', { opacity: 1, y: 0, duration: 0.7 }, 1.7)
+            .to('#cta', { opacity: 1, duration: 0.6 }, 2.1)
+            .to('#deco', { opacity: 1, duration: 0.6 }, 2.2)
+            .to('#photo', { opacity: 1, scale: 1, y: 0, duration: 1.2, ease: 'power2.inOut' }, 2.4);
+
+        heroTl.eventCallback('onComplete', () => {
+            document.querySelectorAll('.hero-left > *').forEach(el => {
+                gsap.fromTo(el,
+                    { scale: 1, opacity: 1, y: 0, filter: 'blur(0px)' },
+                    {
+                        scale: 0.7, opacity: 0, y: 50, filter: 'blur(5px)', ease: 'power2.in',
+                        scrollTrigger: { trigger: el, start: 'top 30%', end: 'top -15%', scrub: 0.6 }
+                    }
+                );
+            });
+            gsap.fromTo('#photo',
+                { scale: 1, opacity: 1, y: 0, filter: 'blur(0px)' },
+                {
+                    scale: 0.55, opacity: 0, y: 60, filter: 'blur(8px)', ease: 'power2.in',
+                    scrollTrigger: { trigger: '#photo', start: 'top 30%', end: 'top -20%', scrub: 0.6 }
+                }
+            );
+        });
+
+        gsap.set('.skills-header', { opacity: 0, y: 40 });
+        gsap.set('[data-skill-card]', { opacity: 0, y: 40 });
+        gsap.set('[data-work-header]', { opacity: 0, y: 60 });
+        gsap.set('[data-work-slider] .work-image-container', { opacity: 0, x: isMobile ? 0 : -80, y: isMobile ? 40 : 0, filter: 'blur(8px)' });
+        gsap.set('[data-work-slider] .work-content', { opacity: 0, x: isMobile ? 0 : 80, y: isMobile ? 40 : 0, filter: 'blur(8px)' });
+        gsap.set('[data-journey-header]', { opacity: 0, y: 60 });
+        gsap.set('[data-contact-header]', { opacity: 0, y: 60 });
+        gsap.set('[data-contact-info]', { opacity: 0, x: isMobile ? 0 : -50, y: isMobile ? 30 : 0, filter: 'blur(8px)' });
+        gsap.set('[data-contact-form]', { opacity: 0, x: isMobile ? 0 : 50, y: isMobile ? 30 : 0, filter: 'blur(8px)' });
+        gsap.set('.tl-row', { opacity: 0, y: isMobile ? 30 : 0 });
+        gsap.set('.tl-left', { x: isMobile ? 0 : -30 });
+        gsap.set('.tl-right', { x: isMobile ? 0 : 30 });
+
+        function revealEl(el, props, delay) {
+            gsap.to(el, { ...props, delay: delay || 0, clearProps: 'filter' });
+        }
+
+        if (isMobile) {
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    const el = entry.target;
+                    io.unobserve(el);
+
+                    if (el.classList.contains('skills-header') || el.matches('[data-work-header]') || el.matches('[data-journey-header]') || el.matches('[data-contact-header]')) {
+                        revealEl(el, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' });
+                    } else if (el.matches('[data-skill-card]')) {
+                        const cards = gsap.utils.toArray('[data-skill-card]');
+                        const idx = cards.indexOf(el);
+                        revealEl(el, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, idx * 0.1);
+                    } else if (el.classList.contains('work-image-container')) {
+                        revealEl(el, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8, ease: 'power3.out' });
+                    } else if (el.classList.contains('work-content')) {
+                        revealEl(el, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8, ease: 'power3.out' }, 0.15);
+                    } else if (el.matches('[data-contact-info]')) {
+                        revealEl(el, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.7, ease: 'power3.out' });
+                    } else if (el.matches('[data-contact-form]')) {
+                        revealEl(el, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.7, ease: 'power3.out' }, 0.1);
+                    } else if (el.classList.contains('tl-row')) {
+                        revealEl(el, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' });
+                        el.classList.add('tl-active');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+            [
+                '.skills-header',
+                '[data-skill-card]',
+                '[data-work-header]',
+                '.work-image-container',
+                '.work-content',
+                '[data-journey-header]',
+                '.tl-row',
+                '[data-contact-header]',
+                '[data-contact-info]',
+                '[data-contact-form]',
+            ].forEach(sel => {
+                document.querySelectorAll(sel).forEach(el => io.observe(el));
+            });
+
+        } else {
+            gsap.to('.skills-header', {
+                opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+                scrollTrigger: { trigger: '.skills-section', start: 'top 85%', once: true }
+            });
+
+            gsap.utils.toArray('[data-skill-card]').forEach((card, i) => {
+                gsap.to(card, {
+                    opacity: 1, y: 0, duration: 0.7, ease: 'power3.out',
+                    delay: i * 0.12,
+                    scrollTrigger: { trigger: '.skills-grid', start: 'top 85%', once: true }
+                });
+            });
+
+            gsap.fromTo('.skills-header',
+                { scale: 1, opacity: 1, y: 0, filter: 'blur(0px)' },
+                {
+                    scale: 0.7, opacity: 0, y: 50, filter: 'blur(5px)', ease: 'power2.in',
+                    scrollTrigger: { trigger: '.skills-header', start: 'top 30%', end: 'top -15%', scrub: 0.6 }
+                }
+            );
+
+            gsap.utils.toArray('[data-skill-card]').forEach(card => {
+                gsap.fromTo(card,
+                    { scale: 1, opacity: 1, y: 0, filter: 'blur(0px)' },
+                    {
+                        scale: 0.65, opacity: 0, y: 60, filter: 'blur(6px)', ease: 'power2.in',
+                        scrollTrigger: { trigger: card, start: 'top 30%', end: 'top -20%', scrub: 0.6 }
+                    }
+                );
+            });
+
+            gsap.to('[data-work-header]', {
+                opacity: 1, y: 0, duration: 1, ease: 'power3.out',
+                scrollTrigger: { trigger: '[data-work-header]', start: 'top 85%', once: true }
+            });
+
+            gsap.to('[data-work-slider] .work-image-container', {
+                opacity: 1, x: 0, filter: 'blur(0px)', duration: 1.1, ease: 'power3.out',
+                scrollTrigger: { trigger: '[data-work-slider]', start: 'top 85%', once: true }
+            });
+
+            gsap.to('[data-work-slider] .work-content', {
+                opacity: 1, x: 0, filter: 'blur(0px)', duration: 1.1, ease: 'power3.out',
+                scrollTrigger: { trigger: '[data-work-slider]', start: 'top 85%', once: true }
+            });
+
+            gsap.fromTo('[data-work-slider]',
+                { scale: 1, opacity: 1, y: 0, filter: 'blur(0px)' },
+                {
+                    scale: 0.85, opacity: 0, y: 60, filter: 'blur(6px)', ease: 'power2.in',
+                    scrollTrigger: { trigger: '.work-section', start: 'bottom 40%', end: 'bottom 0%', scrub: 0.8 }
+                }
+            );
+        }
+
+        const projects = [
+            {
+                name: "LSP KJN Company Profiles",
+                role: "Web Developer · PT. Sevanam Teknologi Solusindo",
+                desc: "Web static company profile for LSP KJN, built with native HTML, CSS, and JavaScript. Focused on delivering a responsive and modern user interface to showcase the institution's services.",
+                tags: ["HTML-CSS", "JS"],
+                color: "#7b1adc",
+                img: "Assets/img/lsp_kjn.png",
+                link: "https://lspkjn.id/"
+            },
+            {
+                name: "Zescra Movie",
+                role: "Web Developer · Final Project SMK",
+                desc: "ZMV (Zescra Movie) is a cloud-based movie streaming website. It focuses on efficiency by storing all video assets in the cloud and offers a hassle-free user experience with a one-click Google Sign-In feature.",
+                tags: ["HTML-CSS", "JavaScript", "PHP - CI 4", "VidGuard", "MySQL"],
+                color: "#7b1adc",
+                img: "Assets/img/zmv.png",
+                link: "#"
+            },
+            {
+                name: "TJ SARAN",
+                role: "Web Developer · Product Showcase SMK",
+                desc: "A web-based school reporting platform for students to submit feedback and grievances directly to the administration.",
+                tags: ["HTML-CSS", "JavaScript", "MySQL"],
+                color: "#7b1adc",
+                img: "Assets/img/tj_saran.jpeg",
+                link: "#"
+            },
+            {
+                name: "Surya Motor",
+                role: "Web Developer · Internship Project",
+                desc: "An all-in-one workshop management web app with automated data integration and payroll calculation.",
+                tags: ["HTML-CSS", "JavaScript", "PHP", "MySQL"],
+                color: "#7b1adc",
+                img: "Assets/img/sm_admin.jpeg",
+                link: "#"
+            },
+        ];
+
+        let workCurrent = 0;
+        const workTotal = projects.length;
+        const workContainer = document.getElementById('workImageContainer');
+        const workProgress = document.getElementById('workProgress');
+        const workCounterNum = document.getElementById('workCounterNum');
+
+        document.getElementById('workCounterTotal').textContent = String(workTotal).padStart(2, '0');
+
+        projects.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'work-card';
+            const img = document.createElement('img');
+            img.src = p.img; img.alt = p.name; img.loading = 'lazy';
+            const overlay = document.createElement('div');
+            overlay.className = 'work-card-overlay';
+            card.appendChild(img); card.appendChild(overlay);
+            workContainer.appendChild(card);
+        });
+
+        projects.forEach(() => {
+            const dot = document.createElement('div');
+            dot.className = 'work-progress-dot';
+            workProgress.appendChild(dot);
+        });
+
+        function workGetPos(ci, ai) { return (ci - ai + workTotal) % workTotal; }
+
+        function workUpdateCards() {
+            workContainer.querySelectorAll('.work-card').forEach((card, i) => {
+                const pos = workGetPos(i, workCurrent);
+                card.setAttribute('data-pos', pos < 4 ? pos : 3);
+            });
+        }
+
+        function workRevealContent(dir) {
+            const p = projects[workCurrent];
+            const outDir = dir > 0 ? -20 : 20;
+            const els = ['#workProjTitle', '#workProjSubtitle', '#workLine', '#workProjDesc', '#workTags', '#workProjCta'];
+
+            gsap.to(els, {
+                opacity: 0, y: outDir, duration: 0.25, ease: 'power2.in',
+                onComplete: () => {
+                    document.getElementById('workProjTitle').textContent = p.name;
+                    document.getElementById('workProjSubtitle').textContent = p.role;
+                    document.getElementById('workProjDesc').textContent = p.desc;
+                    document.getElementById('workProjCta').href = p.link;
+                    document.getElementById('workLine').style.background = p.color;
+
+                    workCounterNum.textContent = String(workCurrent + 1).padStart(2, '0');
+                    gsap.fromTo(workCounterNum, { y: -10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' });
+
+                    const tagsEl = document.getElementById('workTags');
+                    tagsEl.innerHTML = '';
+                    p.tags.forEach(t => {
+                        const span = document.createElement('span');
+                        span.className = 'work-tag'; span.textContent = t;
+                        tagsEl.appendChild(span);
+                    });
+
+                    workProgress.querySelectorAll('.work-progress-dot').forEach((d, i) => {
+                        d.classList.toggle('active', i === workCurrent);
+                        d.style.background = i === workCurrent ? p.color : '';
+                    });
+
+                    gsap.fromTo(els,
+                        { opacity: 0, y: dir > 0 ? 20 : -20 },
+                        { opacity: 1, y: 0, duration: 0.55, stagger: 0.06, ease: 'power3.out' }
+                    );
+                }
+            });
+        }
+
+        function workNavigate(dir) {
+            workCurrent = (workCurrent + dir + workTotal) % workTotal;
+            workUpdateCards();
+            workRevealContent(dir);
+        }
+
+        document.getElementById('workBtnDown').addEventListener('click', () => workNavigate(1));
+        document.getElementById('workBtnUp').addEventListener('click', () => workNavigate(-1));
+
+        workContainer.addEventListener('click', e => {
+            const card = e.target.closest('.work-card');
+            if (!card) return;
+            const cards = [...workContainer.querySelectorAll('.work-card')];
+            if (workGetPos(cards.indexOf(card), workCurrent) > 0) workNavigate(1);
+        });
+
+        document.addEventListener('keydown', e => {
+            const rect = document.getElementById('work').getBoundingClientRect();
+            if (rect.top >= window.innerHeight || rect.bottom <= 0) return;
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') workNavigate(1);
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') workNavigate(-1);
+        });
+
+        workUpdateCards();
+        workRevealContent(1);
+
+        gsap.to('[data-journey-header]', {
+            opacity: 1, y: 0, duration: 1, ease: 'power3.out',
+            scrollTrigger: { trigger: '[data-journey-header]', start: 'top 85%', once: true }
+        });
+
+        gsap.fromTo('[data-journey-header]',
+            { scale: 1, opacity: 1, y: 0, filter: 'blur(0px)' },
+            {
+                scale: 0.7, opacity: 0, y: 50, filter: 'blur(5px)', ease: 'power2.in',
+                scrollTrigger: { trigger: '[data-journey-header]', start: 'top 30%', end: 'top -15%', scrub: 0.6 }
+            }
+        );
+
+        if (!isMobile) {
+            gsap.utils.toArray('.tl-row').forEach(row => {
+                gsap.to(row, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.75,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: row,
+                        start: 'top 88%',
+                        once: true,
+                        onEnter: () => row.classList.add('tl-active')
+                    }
+                });
+            });
+        }
+
+        (function setupCenterLine() {
+            const wrap = document.getElementById('tl-center-wrap');
+            const fill = document.getElementById('tl-center-fill');
+            const tip = document.getElementById('tl-center-tip');
+            if (!wrap || !fill || !tip) return;
+
+            ScrollTrigger.create({
+                trigger: wrap,
+                start: 'top 72%',
+                once: true,
+                onEnter: () => gsap.to(tip, { opacity: 1, duration: 0.5, ease: 'power2.out' }),
+            });
+
+            ScrollTrigger.create({
+                trigger: wrap,
+                start: 'top 48%',
+                end: 'bottom 32%',
+                onUpdate: self => {
+                    const pct = self.progress * 100;
+                    fill.style.height = pct + '%';
+                    tip.style.top = pct + '%';
+                }
+            });
+        })();
+
+        function tlSpot(card, e) {
+            card.style.setProperty('--mx', e.offsetX + 'px');
+            card.style.setProperty('--my', e.offsetY + 'px');
+        }
+        window.tlSpot = tlSpot;
+
+        if (!isMobile) {
+            gsap.to('[data-contact-header]', {
+                opacity: 1, y: 0, duration: 1, ease: 'power3.out',
+                scrollTrigger: { trigger: '[data-contact-header]', start: 'top 85%', once: true }
+            });
+
+            gsap.to('[data-contact-info]', {
+                opacity: 1, x: 0, filter: 'blur(0px)', duration: 1, ease: 'power3.out',
+                scrollTrigger: { trigger: '[data-contact-info]', start: 'top 85%', once: true }
+            });
+
+            gsap.to('[data-contact-form]', {
+                opacity: 1, x: 0, filter: 'blur(0px)', duration: 1, ease: 'power3.out',
+                scrollTrigger: { trigger: '[data-contact-form]', start: 'top 85%', once: true }
+            });
+        }
+
+        (function initParticles() {
+            const container = document.getElementById('particle-container');
+            if (!container) return;
+            const fragment = document.createDocumentFragment();
+            for (let i = 0; i < 100; i++) {
+                const span = document.createElement('span');
+                span.classList.add('particle');
+                span.style.setProperty('--dim', `${3 + Math.random() * 6}rem`);
+                span.style.setProperty('--uplift', `${10 + Math.random() * 15}rem`);
+                span.style.setProperty('--pos-x', `${Math.random() * 100}%`);
+                span.style.setProperty('--dur', `${3 + Math.random() * 3}s`);
+                span.style.setProperty('--delay', `${-1 * Math.random() * 10}s`);
+                fragment.appendChild(span);
+            }
+            container.appendChild(fragment);
+        })();
+
+        function setOrbit() {
+            const frame = document.querySelector('.photo-frame');
+            const orbit = document.querySelector('.photo-orbit');
+            if (!frame || !orbit) return;
+
+            const rect = frame.getBoundingClientRect();
+            const orbitRect = orbit.getBoundingClientRect();
+            const pad = 20;
+            const W = rect.width + pad * 2;
+            const H = rect.height + pad * 2;
+            const ox = rect.left - orbitRect.left - pad;
+            const oy = rect.top - orbitRect.top - pad;
+
+            const ns = 'http://www.w3.org/2000/svg';
+            const svg = document.createElementNS(ns, 'svg');
+            svg.setAttribute('class', 'orbital-svg');
+            svg.style.cssText = `position:absolute;left:${ox}px;top:${oy}px;width:${W}px;height:${H}px;overflow:visible;pointer-events:none;`;
+            svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+
+            const defs = document.createElementNS(ns, 'defs');
+            const path = document.createElementNS(ns, 'path');
+            path.setAttribute('id', 'orbit-path');
+            path.setAttribute('d', `M 0,0 L ${W},0 L ${W},${H} L 0,${H} Z`);
+            defs.appendChild(path);
+            svg.appendChild(defs);
+
+            const labels = [
+                '• ZESCRA HENDRIC',
+                '• WEB PROGRAMMER',
+                '• MC SERVER DEV',
+                '• STIKOM BALI',
+            ];
+
+            const repeatCount = window.innerWidth <= 780 ? 7 : (window.innerWidth <= 900 ? 5 : 12);
+            const repeated = Array.from({ length: repeatCount }, (_, i) => labels[i % labels.length]).join(' ');
+
+            function makeTextPath(id) {
+                const t = document.createElementNS(ns, 'text');
+                const tp = document.createElementNS(ns, 'textPath');
+                tp.setAttribute('id', id);
+                tp.setAttribute('href', '#orbit-path');
+                tp.setAttribute('startOffset', '0px');
+                tp.textContent = repeated;
+                t.appendChild(tp);
+                svg.appendChild(t);
+                return tp;
+            }
+
+            const tp1 = makeTextPath('tp1');
+            const tp2 = makeTextPath('tp2');
+            orbit.appendChild(svg);
+
+            const perimeter = path.getTotalLength();
+            let pxOffset = 0, paused = false;
+
+            orbit.addEventListener('mouseenter', () => paused = true);
+            orbit.addEventListener('mouseleave', () => paused = false);
+
+            function tick() {
+                if (!paused) pxOffset = (pxOffset + 0.9) % perimeter;
+                tp1.setAttribute('startOffset', pxOffset + 'px');
+                tp2.setAttribute('startOffset', (pxOffset - perimeter) + 'px');
+                requestAnimationFrame(tick);
+            }
+            tick();
+        }
+
+        const EMAILJS_PUBLIC_KEY  = 'NiED7ON2lv5Ar0J9M';
+        const EMAILJS_SERVICE_ID  = 'service_1qj0ehw';
+        const EMAILJS_TEMPLATE_ID = 'template_wyd291g';
+
+        emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+        const form       = document.getElementById('contactForm');
+        const submitBtn  = document.getElementById('cfSubmit');
+        const toast      = document.getElementById('cfToast');
+
+        const fields = {
+            from_name  : { el: document.getElementById('cf-name'),    err: document.getElementById('err-name'),    label: 'Name'    },
+            from_email : { el: document.getElementById('cf-email'),   err: document.getElementById('err-email'),   label: 'Email'   },
+            subject    : { el: document.getElementById('cf-subject'),  err: document.getElementById('err-subject'),  label: 'Subject' },
+            message    : { el: document.getElementById('cf-message'), err: document.getElementById('err-message'), label: 'Message' },
+        };
+
+        function validateEmail(v) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+        }
+
+        function validate() {
+            let ok = true;
+            Object.entries(fields).forEach(([key, f]) => {
+                const val = f.el.value.trim();
+                f.el.classList.remove('cf-error');
+                f.err.textContent = '';
+
+                if (!val) {
+                    f.err.textContent = `${f.label} is required.`;
+                    f.el.classList.add('cf-error');
+                    ok = false;
+                } else if (key === 'from_email' && !validateEmail(val)) {
+                    f.err.textContent = 'Please enter a valid email.';
+                    f.el.classList.add('cf-error');
+                    ok = false;
+                }
+            });
+            return ok;
+        }
+
+        Object.values(fields).forEach(({ el, err }) => {
+            el.addEventListener('input', () => {
+                el.classList.remove('cf-error');
+                err.textContent = '';
+            });
+        });
+
+        function showToast(msg, type) {
+            toast.textContent = msg;
+            toast.className   = `cf-toast ${type} show`;
+            clearTimeout(toast._timer);
+            toast._timer = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000);
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!validate()) return;
+
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading');
+            toast.classList.remove('show');
+
+            try {
+                await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
+                showToast('Message sent! I`ll get back to you soon.', 'success');
+                form.reset();
+            } catch (err) {
+                console.error('EmailJS error:', err);
+                showToast('Failed to send. Please try again or email me directly.', 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('loading');
+            }
+        });
+
+        document.fonts.ready.then(() => {
+            setTimeout(() => {
+                setOrbit();
+                ScrollTrigger.refresh();
+            }, 150);
+        });
+    </script>
+</body>
+
+</html>
