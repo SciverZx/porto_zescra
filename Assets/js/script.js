@@ -93,19 +93,18 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
             });
         });
 
-        gsap.set('#navbar', { opacity: 0, y: -20 });
-        gsap.set('#label', { opacity: 0, y: 15 });
-        gsap.set('#desc', { opacity: 0, y: 20 });
+        gsap.set('#navbar', { y: -20 });
+        gsap.set('#label', { y: 15 });
+        gsap.set('#desc', { y: 20 });
         gsap.set('#cta', { opacity: 0 });
         gsap.set('#deco', { opacity: 0 });
-        gsap.set('#photo', { opacity: 0, scale: 0.97, y: 20 });
-        gsap.set('.hero-name .line', { yPercent: 110 });
+        gsap.set('#photo', { scale: 0.97, y: 20 });
 
         const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
         heroTl
             .to('#navbar', { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, 0.3)
             .to('#label', { opacity: 1, y: 0, duration: 0.6 }, 0.9)
-            .to('.hero-name .line', { yPercent: 0, duration: 0.9, stagger: 0.15, ease: 'power4.out' }, 1.1)
+            .to('.hero-name .line', { y: '0%', duration: 0.9, stagger: 0.15, ease: 'power4.out' }, 1.1)
             .to('#desc', { opacity: 1, y: 0, duration: 0.7 }, 1.7)
             .to('#cta', { opacity: 1, duration: 0.6 }, 2.1)
             .to('#deco', { opacity: 1, duration: 0.6 }, 2.2)
